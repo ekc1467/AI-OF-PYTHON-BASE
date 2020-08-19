@@ -1,8 +1,14 @@
-import openpyxl
+from tinydb import TinyDB, Query
 
-filename = "sample.xlsx"
+filepath = "test-tynydb.json"
+db= TinyDB(filepath)
 
-book = openpyxl.load_workbook(filename)
+table = db.table('fruits')
 
-sheet = book.worksheets[1]
-sheetname = book.sheetnames;
+table = db.table('fruits')
+
+table.insert({'name':})
+
+print(table.all())
+
+Item = Query
